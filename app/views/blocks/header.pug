@@ -1,0 +1,29 @@
+header.header
+	.container
+		.nav.navbar.navbar-expand-md.navbar-light.header-top
+			a.navbar-brand(href='#')
+				img.logo(src="./images/logo.png", alt="")
+			button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+				span.navbar-toggler-icon
+			//- i.fa.fa-bars.header-icon-toggle
+			.collapse.navbar-collapse#collapsibleNavbar
+				ul.navbar-nav.ml-auto.header-menu
+					i.fas.fa-times.header-icon-close
+					li.nav-item.header-menu-item.active
+						a.nav-link.header-menu-link(href="/") Study
+					li.nav-item.header-menu-item
+						a.nav-link.header-menu-link(href="/") About us
+					li.nav-item.header-menu-item
+						a.nav-link.header-menu-link(href="/") Admission
+					li.nav-item.header-menu-item
+						a.nav-link.header-menu-link(href="/") Pages
+					li.nav-item.header-menu-item
+						a.nav-link.header-menu-link(href="/") News
+					li.nav-item.header-menu-item
+						a.nav-link.header-menu-link(href="/") Contact
+					li.nav-item.header-menu-item
+						button.header-menu-button Apply now
+		.block-box.col-xl-6.col-lg-10
+			h2.block-box-title Innovation for education and society
+			h3.block-box-slogan Our interdisciplinary majors and minors mean you can your own course for academic success.
+			button.block-box-button Visit our Campus

@@ -1,0 +1,139 @@
+.news {
+  margin-top: -25rem;
+  padding-bottom: 7rem;
+  &-head {
+    justify-content: space-between;
+    padding-bottom: 8rem;
+    margin-bottom: 6rem;
+    border-bottom: 1px solid #eff0f4;
+  }
+  &-all {
+    font-size: 1.4rem;
+    font-family: $primary-font;
+    font-weight: 500;
+    color: #fff;
+    background-color: $primary-color;
+    text-transform: capitalize;
+    border-radius: 3rem;
+    width: 20rem;
+    height: 5rem;
+    &:hover,
+    &:focus {
+      background-color: #38b573;
+    }
+  }
+  &-title {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: $secondary-font;
+    color: $primary-color;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+  }
+  &-subtitle {
+    margin-bottom: 0;
+  }
+  &-item {
+    margin-bottom: 7rem;
+  }
+  &-name {
+    font-family: $secondary-font;
+    color: $title-color;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+  &-desc {
+    margin-bottom: 0;
+  }
+  &-other {
+    @include flexBox(center, space-between);
+    margin-top: 1rem;
+  }
+  &-other {
+    span {
+      font-family: $secondary-font;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+  &-num-heart {
+    padding-right: 3rem;
+  }
+  &-icon {
+    padding-right: 1rem;
+    color: $text-color;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  &-icon.active {
+    color: $primary-color;
+  }
+  @include minWidth(1320px) {
+    &-all {
+      transform: translateX(4.3rem);
+    }
+  }
+  @include maxWidth(1200px) {
+    margin-top: 2rem;
+    &-head-right {
+      text-align: right;
+    }
+  }
+  @include maxWidth(1024px) {
+    margin-top: 7rem;
+    padding-bottom: 0rem;
+    &-head {
+      padding-bottom: 3rem;
+      margin-bottom: 5rem;
+    }
+    &-all {
+      transform: translate(0);
+      width: 16rem;
+      height: 4.5rem;
+    }
+    &-name {
+      font-size: 3.5rem;
+    }
+    &-items {
+      margin-bottom: 4rem;
+    }
+  }
+  @include maxWidth(767px) {
+    margin-top: 5rem;
+    &-item {
+      width: 100%;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+    }
+    &-list > div:not(:last-child) &-item {
+      border-bottom: 1px solid #eee;
+    }
+    &-name {
+      padding-bottom: 2rem;
+      font-size: 3rem;
+    }
+    &-head {
+      display: block;
+    }
+    &-head-left {
+      width: 100%;
+    }
+    &-title {
+      font-size: 3.5rem;
+    }
+    &-all {
+      max-width: 14rem;
+      height: 4.5rem;
+      margin-top: 1.5rem;
+      display: block;
+    }
+  }
+  @include maxWidth(360px) {
+    &-title {
+      font-size: 3rem;
+    }
+  }
+}

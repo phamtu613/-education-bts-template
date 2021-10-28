@@ -1,0 +1,211 @@
+.apply {
+  position: relative;
+  z-index: 1;
+  background: url("../images/background-apply.png") no-repeat center/cover;
+  height: 40rem;
+  top: -45rem;
+  &-image-left,
+  &-image-right {
+    position: absolute;
+  }
+  &-image-left {
+    top: 5rem;
+    left: 11.5rem;
+    z-index: -1;
+  }
+  &-image-right {
+    top: 6.7rem;
+    right: 16rem;
+    z-index: -1;
+  }
+  &-text {
+    padding-top: 17rem;
+  }
+  &-wrapper-form {
+    margin-left: 2rem;
+  }
+  &-form {
+    background: url("../images/img-bg-form.png") no-repeat center/cover;
+    padding: 5rem 4rem 4.7rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    transform: translateY(-7.5rem);
+  }
+  &-subtitle {
+    font-family: $secondary-font;
+    color: $title-color;
+    font-weight: 400;
+    letter-spacing: 5.3px;
+    span {
+      color: #fb384d;
+    }
+  }
+  &-title {
+    font-family: $secondary-font;
+    color: $title-color;
+    font-weight: 700;
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+  &-form-title {
+    font-family: $secondary-font;
+    color: #202020;
+    font-weight: 400;
+    font-size: 2.4rem;
+    letter-spacing: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 5rem;
+    margin-bottom: 0;
+  }
+  &-input {
+    display: block;
+    border-bottom: 1px solid #d7e4ed;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    background: transparent;
+  }
+  &-input:last-child {
+    margin-bottom: 2rem;
+  }
+  &-policy {
+    @include flexBox(center);
+  }
+  &-label--checkbox {
+    font-size: 1.3rem;
+    color: #87959c;
+    font-weight: 500;
+    padding-left: 1.4rem;
+    margin-bottom: 0;
+  }
+  &-call {
+    margin: 3.5rem 0 2rem;
+    @include flexBox();
+  }
+  &-submit {
+    padding: 1.5rem 3.5rem;
+    font-family: $secondary-font;
+    color: #fff;
+    background-color: $primary-color;
+    border-radius: 3rem;
+    letter-spacing: 1px;
+    margin-right: 4rem;
+    height: 4.8rem;
+    &:hover,
+    &:focus {
+      background-color: #38b573;
+    }
+  }
+  &-phone {
+    p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding-bottom: 2px;
+      padding-top: 6px;
+      margin-bottom: 0;
+    }
+    a {
+      font-size: 1.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: $text-color;
+    }
+  }
+  &-login {
+    color: #87959c;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-bottom: 2px solid #d5d9dd;
+  }
+
+  @include maxWidth(1200px) {
+    top: -15rem;
+  }
+  @include maxWidth(1024px) {
+    top: 0;
+    &-title {
+      font-size: 3.5rem;
+    }
+    &-wrapper-form {
+      margin-left: 0;
+    }
+    &-form {
+      padding: 2rem 2rem 2.5rem;
+      transform: translateY(-4rem);
+    }
+    &-form-title {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+  @include maxWidth(991px) {
+    height: 90rem;
+    margin-top: -10rem;
+    &-form {
+      transform: translateY(11rem);
+    }
+    &-image-left {
+      left: 1rem;
+      top: 2rem;
+    }
+    &-image-right {
+      top: 4rem;
+      right: 1rem;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+  @include maxWidth(767px) {
+    height: 95rem;
+    margin-top: 0;
+    &-wrapper-form {
+      margin-left: 0;
+    }
+    &-form {
+      transform: translateY(15rem);
+    }
+    &-image-left {
+      left: 1rem;
+    }
+    &-image-right {
+      top: 6rem;
+      right: 1rem;
+    }
+  }
+  @include maxWidth(540px) {
+    &-form {
+      transform: translateY(10rem);
+    }
+  }
+  @include maxWidth(420px) {
+    height: 88rem;
+    &-call {
+      margin-top: 3rem;
+    }
+    &-submit {
+      margin-right: 0;
+      padding: 0;
+      height: 4rem;
+      width: 11rem;
+    }
+    &-phone {
+      margin-left: auto;
+      p {
+        padding: 0;
+      }
+    }
+    &-image-right {
+      right: 0;
+      top: 3rem;
+    }
+    &-image-left {
+      left: 0;
+      top: 2rem;
+    }
+    &-form {
+      transform: translateY(5rem);
+    }
+  }
+}

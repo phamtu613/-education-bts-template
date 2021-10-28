@@ -1,0 +1,220 @@
+.header {
+  background: url("../images//Background.png") no-repeat center/cover;
+  height: 102.5rem;
+  &-top {
+    padding: 0;
+    padding-top: 2.5rem;
+  }
+  &-icon-close {
+    display: none;
+  }
+  &-icon-toggle {
+    display: none;
+    color: $primary-color;
+    font-size: 2rem;
+    padding-right: 25px;
+    cursor: pointer;
+  }
+  &-menu {
+    @include flexBox(center);
+  }
+  &-menu-link {
+    padding: 1.5rem 2.5rem;
+    color: $text-color;
+  }
+  .navbar-light &-menu-item.active {
+    .header-menu-link {
+      color: $primary-color;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+  &-menu-link {
+    transform: all 0.25s;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+  &-menu-button {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background-color: #fff;
+    border: none;
+    padding: 1.1rem 2.5rem;
+    border-radius: 3rem;
+    transition: all 0.25s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:hover {
+      color: #fff;
+      background-color: $primary-color;
+    }
+  }
+  .block-box {
+    padding-top: 20rem;
+    padding-right: 5rem;
+    padding-left: 0;
+    &-title {
+      color: $primary-color;
+      font-size: 4rem;
+      font-family: $secondary-font;
+      font-weight: bold;
+      line-height: 5.5rem;
+      padding-bottom: 2rem;
+      margin-bottom: 0;
+    }
+    &-slogan {
+      font-size: 1.8rem;
+      padding-bottom: 4rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    &-button {
+      font-size: 1.8rem;
+      color: #fff;
+      background: $primary-color;
+      width: 21.7rem;
+      height: 5.6rem;
+      text-align: center;
+      border-radius: 3rem;
+      transition: all 0.25s;
+      border: 1px solid transparent;
+      &:hover {
+        background-color: #fff9f3;
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+  .navbar-brand {
+    padding: 0;
+  }
+  @include maxWidth(1024px) {
+    background-position: 70%;
+    height: 70rem;
+    &-menu-link {
+      padding: 1.5rem 1rem;
+    }
+    &-menu-button {
+      padding: 1rem 1.5rem;
+    }
+    .block-box {
+      padding-top: 5rem;
+      &-slogan {
+        color: #333;
+      }
+    }
+    .navbar-expand-md {
+      .header-menu-link {
+        padding: 1.5rem 1rem;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    .container {
+      padding: 0;
+    }
+    &-top {
+      padding: 0;
+    }
+    .navbar-brand {
+      padding-left: 1.5rem;
+      padding-top: 1.5rem;
+    }
+    .navbar-toggler {
+      margin-right: 1.5rem;
+    }
+    &-menu {
+      display: block;
+      background: #fbd6aa;
+      margin-top: 1rem;
+      padding-bottom: 2rem;
+      width: 100%;
+    }
+    &-menu-button {
+      padding: 0.7rem 1rem;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+    }
+    &-menu-link {
+      padding: 1.5rem 0 1.5rem;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      display: block;
+      &:hover {
+        color: #ffc178 !important;
+      }
+    }
+    &-menu-item.active {
+      .header-menu-link {
+        color: #e68b20;
+      }
+    }
+    .block-box {
+      padding-top: 7rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      &-title {
+        font-size: 3rem;
+      }
+      &-slogan {
+        color: #333;
+      }
+    }
+  }
+  @include maxWidth(360px) {
+    .block-box {
+      padding-top: 5rem;
+      &-title {
+        font-size: 3rem;
+      }
+      &-button {
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+      }
+    }
+  }
+  @include minWidth(1025px) {
+    .navbar-expand-md {
+      .header-menu-link {
+        padding: 1.5rem 2.5rem;
+        color: $text-color;
+      }
+    }
+  }
+}
+.home-page2 {
+  .block-box {
+    margin: 0 auto;
+  }
+  .header {
+    background: url("../images//Background2.png") no-repeat center/cover;
+    height: 1180px;
+    @include maxWidth(1200px) {
+      height: 80rem;
+    }
+    @include maxWidth(1024px) {
+      height: 55rem;
+      background-size: contain;
+    }
+    @include maxWidth(767px) {
+      .block-box {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      &-menu {
+        background-color: #69cf96;
+        width: 100%;
+      }
+      &-menu-item.active {
+        .header-menu-link {
+          color: #204a33;
+        }
+      }
+      .header-menu-link:hover {
+        color: #204a33 !important;
+      }
+    }
+  }
+}

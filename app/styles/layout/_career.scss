@@ -1,0 +1,80 @@
+.career {
+  position: relative;
+  top: -16.5rem;
+  &-item {
+    text-align: center;
+    max-height: 28rem;
+    background-color: #f1e3fc;
+    margin-bottom: 3.7rem;
+    padding: 7rem 0 7.5rem;
+    border-radius: 5px;
+  }
+
+  &-list > div:nth-child(2) &-item {
+    background-color: #e3fcfa;
+  }
+  &-list > div:nth-child(3) &-item {
+    background-color: #fcf0e3;
+  }
+  &-list > div:nth-child(4) &-item {
+    background-color: #fceee3;
+  }
+  &-list > div:nth-child(5) &-item {
+    background-color: #f3fce3;
+  }
+  &-list > div:nth-child(6) &-item {
+    background-color: #e3f3fc;
+  }
+  &-icon {
+    margin: 0 auto;
+  }
+  &-text {
+    font-size: 3rem;
+    color: $title-color;
+    font-weight: 700;
+    padding-top: 4rem;
+    margin-bottom: 0;
+  }
+  @include maxWidth(1024px) {
+    top: 0rem;
+    &-item {
+      max-height: 25rem;
+      margin-bottom: 3rem;
+      padding: 5rem 0 5rem;
+    }
+  }
+  @include maxWidth(768px) {
+    &-list > div:nth-child(n + 4) &-item {
+      margin-bottom: 0rem;
+    }
+    &-text {
+      font-size: 2.5rem;
+    }
+  }
+  @include maxWidth(320px) {
+    &-list {
+      display: block;
+    }
+    &-list > div {
+      max-width: 100%;
+      max-height: 20rem;
+      margin-bottom: 2rem;
+    }
+    &-item {
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+    }
+    &-icon {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+    &-text {
+      padding-top: 2rem;
+      font-size: 2.5rem;
+    }
+    &-item:nth-child(n + 4) {
+      margin-bottom: 2rem;
+    }
+  }
+}
